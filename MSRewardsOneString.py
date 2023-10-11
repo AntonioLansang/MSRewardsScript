@@ -10,7 +10,7 @@ webbrowser.register('MSEdge', None, webbrowser.BackgroundBrowser(EdgePath))
 while TermToSearch:
     TermToSearch = TermToSearch[:-1]
     #print(TermToSearch)
-    Wait=random.randint(6,8)
+    Wait=random.uniform(3.4,5.2)
     time.sleep(Wait) 
     webbrowser.get('MSEdge').open(BaseSearchURL+TermToSearch)
 
