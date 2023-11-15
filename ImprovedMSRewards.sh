@@ -7,8 +7,15 @@ Alphabet='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 
 #Subtract the first character for the alphabet
-Alphabet="${Alphabet:1}"
 
-CombinedURL=$BaseBingURL+$Alphabet
+for i in {1..26}
+do
+	
+	CombinedURL=$BaseBingURL+$Alphabet
+	xdg-open $CombinedURL
+	Alphabet="${Alphabet:1}"
+	sleep $((RANDOM%3))
+done
 
-printf "%s" "$CombinedURL"
+
+#printf "%s" "$CombinedURL"
